@@ -55,9 +55,12 @@ int main() {
 bool exp(string str) {
 	for (int i = 0; i < str.length(); i++)
 		str[i] = tolower(str[i]);
+	int count = 0;
 	for (int i = 0; i < str.length() / 2; i++)
-		if (str[i] == str[str.length() - i - 1])
-			return true;
+		if (str[i] == str[str.length() - 1 - i])
+			count++;
+	if (count == str.length() / 2)
+		return true;
 	return false;
 }
 // Задача 3
