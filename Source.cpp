@@ -48,10 +48,9 @@ int main() {
 	cout << sub(str, s);
 	cout << endl;
 
-
 	return 0;
 }
-// Задача 2
+// Задача 2 (Проверка строки на полиндром)
 bool exp(string str) {
 	for (int i = 0; i < str.length(); i++)
 		str[i] = tolower(str[i]);
@@ -63,16 +62,14 @@ bool exp(string str) {
 		return true;
 	return false;
 }
-// Задача 3
+// Задача 3 (Вывод количества символов строки)
 int sizeStr(string str) {
 	return str.length();
 }
-// Задача 4
+// Задача 4 (Возвращение подстроки, начинавшейся с вводимого символа)
 string sub(string str, char sym) {
 	for (int i = 0; i < str.length(); i++)
-		if (str[i] == sym) {
-			cout << str.substr(str.rfind(sym));
-			break;
-		}
+		if (str[i] == sym)
+			return str.substr(str.rfind(sym));
 	return "";
 }
